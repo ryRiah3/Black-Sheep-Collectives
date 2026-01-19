@@ -1,2 +1,2 @@
 # Black-Thread-Collective
-A Practice Visual Website To Display My Work 
+A Practice Visual Website To Practice different techniques and learn more about different coding functions. 
