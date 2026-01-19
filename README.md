@@ -1,2 +1,2 @@
-# Black-Thread-Collective
+# Black-Root-Collectives
 A Practice Visual Website To Practice different techniques and learn more about different coding functions. 
