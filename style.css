@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background: rgb(2, 8, 91);
+    background: radial-gradient(circle, rgba(2, 8, 91, 1) 0%, rgba(9, 121, 113, 1) 100%);
+
+    .carousel-slide {
+        width: 100%;
+        display: flex;
+        animation: carousel-animation 25s infinite alternate;
+        & img {
+           width: calc(100% / 5);
+           width: 300px; /* Sets a fixed width */
+           height: auto; /* Height adjusts automatically to maintain aspect ratio */
+           object-fit: cover; /* Ensures the image covers the area without distortion */
+        }
+    }
+}
+@keyframes carousel-animation {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(-20%);
+    }
+    60% {
+        transform: translateX(-40%);
+    }
+    80% {
+        transform: translateX(-60%);
+    }
+    100% {
+        transform: translateX(-80%);
+    }
+}
