@@ -1,10 +1,46 @@
 body {
     background-color: black;
     color:white;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 img {
-    width: 300px;
-    height: auto;
+    width: 200px;
+    height: 200px;
+}
+
+.container {
+    width: 200px;
+    height: 350px;
+    position: relative;
+    transform-style:preserve-3d;
+    transform: perspective(1000px);
+    animation: gallery 60s infinite linear;
+    cursor: pointer;
+}
+
+.container span {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(500px);
+}
+
+.container span img {
+    position: absolute;
+    border-radius: 10px;
+    border: 6px outset deepskyblue;
+}
+
+@keyframes gallery {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
 }
